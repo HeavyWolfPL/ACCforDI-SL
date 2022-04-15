@@ -80,6 +80,8 @@ def updateConfig(ip):
         return [False, "Config file is not writable. Make sure you have permissions to run the file!"]
 
 def sendWebhook(success, params):
+    if webhook_url == "":
+        return
     if success == True:
         if not webhook_on_success:
             return
