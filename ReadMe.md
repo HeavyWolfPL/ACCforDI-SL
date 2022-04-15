@@ -23,7 +23,8 @@
 
 ### Step 2 | Scheduling the script execution
 #### Linux (crontab)
-> Add the following line to your crontab (`crontab -e` command):
+> Add the following line to your crontab (`crontab -e` command)
+> <br>It will execute the script every hour. Read the [crontab](https://man7.org/linux/man-pages/man5/crontab.5.html) documentation for more information.
 > - `0 * * * *  python3 <path-to-file.py>`
 
 #### Windows Server (SCHTASKS)
