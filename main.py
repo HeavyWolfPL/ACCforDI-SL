@@ -16,11 +16,11 @@ print("╚═══════════════════════�
 # Linux - "/home/scpsl/.config/SCP Secret Laboratory/config/7777"
 # Windows - "C:\Users\wafel\AppData\Roaming\SCP Secret Laboratory\config\7777"
 # You must not use %appdata% in the path.
-path = "D:/Programowanie/Projekty/Python/SL-DICC/"
+path = "/home/scpsl/.config/SCP Secret Laboratory/config/7777"
 
 # This is a Discord Webhook URL. Webhook will be sent when an error in encountered and optionally on successful config change.
 # Set it to "" if you don't want to use it at all.
-webhook_url = "https://canary.discord.com/api/webhooks/952503004286832670/SCyuwuxWLTnwsARM7ko8i9FqH9YU3SLCwWEzbjVsbb058f0rOuI79vwreCHIBg_rFNb7"
+webhook_url = ""
 webhook_on_success =  True
 webhook_on_no_change = False
 
