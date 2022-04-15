@@ -1,4 +1,4 @@
-# SL-DICC | Dynamic IP Config Changer for [SCP: Secret Laboratory](https://scpslgame.com/)
+# ACCforDI | Automatic Config Changer for Dynamic IP in [SCP: Secret Laboratory](https://scpslgame.com/)
 <br>Dynamic IP detection isn't perfect in SL, thus I've written a script that's supposed to work as a crontab to detect the new IP and change it to the one you're using.
 
 ---

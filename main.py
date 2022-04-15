@@ -3,13 +3,14 @@ from datetime import datetime
 from requests import get, post, exceptions
 
 print("╔══════════════════════════════════════════════════════╗")
-print("║                       SL-DICC                        ║")
-print("║ Dynamic IP Config Changer for SCP: Secret Laboratory ║")
+print("║                       ACCforDI                       ║")
+print("║        Automatic Config Changer for Dynamic IP       ║")
+print("║               in SCP: Secret Laboratory              ║")
 print("║                                                      ║")
 print("║ This is not an official tool from Northwood Studios! ║")
 print("║      Northwood is not responsible for any damage     ║")
 print("╠══════════════════════════════════════════════════════╣")
-print("║        https://github.com/HeavyWolfPL/SL-DICC        ║")
+print("║        https://github.com/HeavyWolfPL/ACCforDI       ║")
 print("╚══════════════════════════════════════════════════════╝")
 
 # Examples:
@@ -102,11 +103,11 @@ def sendWebhook(success, params):
             "description" : params,
             "color": color,
             "author": {
-                "name": "SL-DICC | {}".format(title),
-                "url": "https://github.com/HeavyWolfPL/SL-DICC"
+                "name": "ACCforDI | {}".format(title),
+                "url": "https://github.com/HeavyWolfPL/ACCforDI"
             },
             "footer": {
-                "text": "SL-DICC by Wafel#8871",
+                "text": "ACCforDI by Wafel#8871",
                 "icon_url": "https://i.imgur.com/g3a3tLo.png"
             },
             "timestamp": datetime.now().isoformat()
