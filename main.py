@@ -43,11 +43,12 @@ configValidator()
 
 def getIP():
     ip = get('https://api.ipify.org').content.decode('utf8')
-    print('Public adress according to API: {}'.format(ip))
-
+    
     ipRegex = re.search("^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$", ip)
     if not ipRegex:
-        print("IPv4 not detected. Make sure you're connected to the internet and nothing is blocking the connection. \nYou may only have a IPv6 or the API can't detect it. \nIf you have any questions, contact me on discord (Wafel#8871) or make a github issue.")
+        return [False, "IPv4 not detected. Make sure you're connected to the internet and nothing is blocking the connection. \nYou may only have an IPv6 or the API can't detect the IPv4."]
+    
+    print('Public adress according to API: {}'.format(ip))
     return ip
 
 def updateConfig(ip):
@@ -118,16 +119,22 @@ def sendWebhook(success, params):
         print("\nSomething went wrong while sending a webhook. Error: \n---------------- \n{} \n---------------- \n\nIf this is a mistake, contact me on discord (Wafel#8871) or make a github issue.".format(err))
 
 ip = getIP()
+if ip[0] == False:
+    sendWebhook(False, ip[1])
+    exit()
 result = updateConfig(ip)
 
 if result[0] == False:
     sendWebhook(False, "**Something went wrong.** \n```{}```".format(result[1]))
     print("\nSomething went wrong. Error: \n---------------- \n{} \n---------------- \n\nIf this is a mistake, contact me on discord (Wafel#8871) or make a github issue.".format(result[1]))
+    exit()
 
 elif result[0] == "NoChanges":
     sendWebhook("NoChanges", "No changes made. Proper IP is already set in the config.")
     print("\nNo changes made. Proper IP is already set in the config.")
+    exit()
 
 else:
     sendWebhook(True, "IP changed from `{old}` to `{new}`".format(old=result[2], new=result[1]))
     print("\nSuccessfully updated config file! Server IP set to: {}.".format(result[1]))
+    exit()
