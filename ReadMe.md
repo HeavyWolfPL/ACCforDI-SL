@@ -13,11 +13,11 @@
 ### Step 1 | Python
 > - Install Python 3.7.8 or higher
 > - Install the following dependencies:
-    - certifi^2021.10.8
-    - charset-normalizer^2.0.12
-    - idna^3.3
-    - requests^2.27.1
-    - urllib3^1.26.9
+<br>    - certifi^2021.10.8
+<br>    - charset-normalizer^2.0.12
+<br>    - idna^3.3
+<br>    - requests^2.27.1
+<br>    - urllib3^1.26.9
 > - Change the `path` value inside the main.py file.
 > - (Optional) Set a `webhook_url`, crontab does not save any logs.
 
